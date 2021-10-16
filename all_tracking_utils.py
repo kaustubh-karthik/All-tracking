@@ -91,8 +91,7 @@ class detector():
 def main():
 
     # Choose one out of 'hands, pose, face_mesh, holistic'
-    detect1 = detector('pose')
-    detect2 = detector('hands')
+    detect1 = detector('')
 
     cap = cv2.VideoCapture(1) # Check for error
 
@@ -102,7 +101,6 @@ def main():
         img, lm_list = detect1.find_lms(img, draw=False)
 
         detect1.display_img(img)
-        detect2.display_img(img)
 
 if __name__ == '__main__':
     main()
